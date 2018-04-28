@@ -14,6 +14,8 @@ word2wordweight_tag = 1
 tag2tagweight_word = 1
 word2wordweight_word = .5
 
+outputfile = "predict_"+str(tag2tagweight_tag).strip("0.")+"_"+str(word2wordweight_tag).strip("0.")+"_"+str(tag2tagweight_word).strip("0.")+"_"+str(word2wordweight_word).strip("0.")+".txt"
+
 allTagCounts = Counter(json.loads(open("allTagCounts.json","r").readline()))
 emissionDists = Counter(json.loads(open("emissionDists.json","r").readline()))
 perWordTagCounts = Counter(json.loads(open("perWordTagCounts.json","r").readline()))
@@ -27,17 +29,20 @@ unk2any = log((1/v_size+alpha)/(v_size+alpha*v_size))
 
 cnt = 0
 
-for tag in emissionDists:
-    emissionDists[tag] = Counter(emissionDists[tag])
+#for tag in emissionDists:
+#    emissionDists[tag] = Counter(emissionDists[tag])
     
 with open("test_v2.txt","r") as f:
     
     for line in f:
-        
+        if cnt>100:
+            break
+            
         thisid, sentence = line.split(",",1)
         if thisid.strip('"')=="id":
             continue
-        sentence = sentence.strip()[1:-1]
+        original_sentence = sentence.strip()[1:-1]
+        sentence = sentence.strip()[1:-1].lower().replace('""','"')
         
         if not(sentence):
             continue
@@ -135,17 +140,17 @@ with open("test_v2.txt","r") as f:
                 mostprob = thisprob
                 missingword = possibleword
         
-        splitsentence = sentence.split(" ")
+        splitsentence = original_sentence.split(" ")
         fullsentence = splitsentence[0:missingwordposition] + [missingword] + splitsentence[missingwordposition:] 
-        writtensentence = splitsentence[0:missingwordposition] + ["("+missingword+")"] + splitsentence[missingwordposition:] 
+        samplesentence = splitsentence[0:missingwordposition] + ["("+missingword+")"] + splitsentence[missingwordposition:] 
         allsentences.append(" ".join(fullsentence))
         
         cnt += 1
-        if cnt%1000==0:
+        if cnt%10==0:
             print(cnt)
-            print(" ".join(writtensentence))
+            print(" ".join(samplesentence))
         
-with open("predict.txt","w") as f:
+with open(outputfile,"w") as f:
     for each_sentence in allsentences:
         f.write(each_sentence+"\n")
         
