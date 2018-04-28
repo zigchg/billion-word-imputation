@@ -146,7 +146,7 @@ with open("test_v2.txt","r") as f:
         allsentences.append(" ".join(fullsentence))
         
         cnt+=1
-        if cnt%100==0:
+        if cnt%1000==0:
             print(cnt)
             print(" ".join(writtensentence))
         
