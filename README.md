@@ -8,6 +8,8 @@ https://www.kaggle.com/c/billion-word-imputation
 pip install stanfordcorenlp
 ## Standford CoreNLP
 https://stanfordnlp.github.io/CoreNLP/
+## word2word.json file
+It is too large to be included in Git. I will set up a download link later.
 
 # Parameters
 In the name of predict output file, the four numbers represents:
