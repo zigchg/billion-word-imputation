@@ -34,11 +34,10 @@ lineCounter = 0
     
 with open("test_v2.txt","r") as f:
     
-    
     for line in f:
         lineCounter+=1
-        if lineCounter>100:
-            break
+#        if lineCounter>100:
+#            break
         
         thisid, sentence = line.split(",",1)
         if thisid=="id":
@@ -142,13 +141,14 @@ with open("test_v2.txt","r") as f:
                 missingword = possibleword
         
         splitsentence = sentence.split(" ")
-        fullsentence = splitsentence[0:missingwordposition] + ["("+missingword+")"] + splitsentence[missingwordposition:] 
+        fullsentence = splitsentence[0:missingwordposition] + [missingword] + splitsentence[missingwordposition:] 
+        writtensentence = splitsentence[0:missingwordposition] + ["("+missingword+")"] + splitsentence[missingwordposition:] 
         allsentences.append(" ".join(fullsentence))
         
         cnt+=1
         if cnt%100==0:
             print(cnt)
-            print(" ".join(fullsentence))
+            print(" ".join(writtensentence))
         
 with open("predict.txt","w") as f:
     for each_sentence in allsentences:
