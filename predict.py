@@ -29,18 +29,13 @@ cnt = 0
 
 for tag in emissionDists:
     emissionDists[tag] = Counter(emissionDists[tag])
-
-lineCounter = 0
     
 with open("test_v2.txt","r") as f:
     
     for line in f:
-        lineCounter+=1
-#        if lineCounter>100:
-#            break
         
         thisid, sentence = line.split(",",1)
-        if thisid=="id":
+        if thisid.strip('"')=="id":
             continue
         sentence = sentence.strip()[1:-1]
         
@@ -145,7 +140,7 @@ with open("test_v2.txt","r") as f:
         writtensentence = splitsentence[0:missingwordposition] + ["("+missingword+")"] + splitsentence[missingwordposition:] 
         allsentences.append(" ".join(fullsentence))
         
-        cnt+=1
+        cnt += 1
         if cnt%1000==0:
             print(cnt)
             print(" ".join(writtensentence))
