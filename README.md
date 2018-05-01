@@ -13,18 +13,25 @@ It is too large to be included in Git. I will set up a download link later.
 
 # Instructions
 Clone this repository
+
 Download [word2word.json]() and save it in the same folder as of the code
+
 The code is tested in Python 3.6.5
 
-pip install stanfordcorenlp
+Then install stanfordcorenlp for python: pip install stanfordcorenlp
+
 download [Stanford CoreNLP](http://nlp.stanford.edu/software/stanford-corenlp-full-2018-02-27.zip)
+
 extract Stanford CoreNLP in the same folder as of the code
 
 It is not necessary to run training.py if you have download word2word.json.
+
 Run predict.py to get a prediction result.
+
 Submit the result to the [Kaggle competition](https://www.kaggle.com/c/billion-word-imputation).
 
 [Our result with weight 1-5-5-1]()
+
 [Our result with weight 1-1-1-1]()
 
 # Parameters
