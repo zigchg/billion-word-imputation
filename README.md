@@ -12,11 +12,11 @@ https://stanfordnlp.github.io/CoreNLP/
 It is too large to be included in Git. I will set up a download link later.
 
 # Instructions
+This system runs in command line. It is tested under ubuntu 16.04 with Python 3.6.5.
+
 Clone this repository
 
 Download [word2word.json](https://drive.google.com/file/d/1wS-kjyIA4e-gfT9yeYikS0SiBhLXVPTe/view) and save it in the same folder as of the code
-
-The code is tested in Python 3.6.5
 
 Then install stanfordcorenlp for python: pip install stanfordcorenlp
 
