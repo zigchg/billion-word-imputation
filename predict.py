@@ -119,10 +119,10 @@ with open("test_v2.txt","r") as f:
             if possibleword==UNK:
                 continue
             
-            if possibleword in emissionDists[missingtag]:
-                thisprob = tag2wordweight_word * emissionDists[missingtag][possibleword]
-            else:
-                thisprob = tag2wordweight_word * emissionDists[missingtag][UNK]
+            #if possibleword in emissionDists[missingtag]:
+            thisprob = tag2wordweight_word * emissionDists[missingtag][possibleword]
+            #else:
+            #    thisprob = tag2wordweight_word * emissionDists[missingtag][UNK]
             
             if previousword not in word2wordDists:
                 thisprob+= unk2any

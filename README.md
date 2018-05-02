@@ -14,7 +14,7 @@ It is too large to be included in Git. I will set up a download link later.
 # Instructions
 Clone this repository
 
-Download [word2word.json]() and save it in the same folder as of the code
+Download [word2word.json](https://drive.google.com/file/d/1wS-kjyIA4e-gfT9yeYikS0SiBhLXVPTe/view) and save it in the same folder as of the code
 
 The code is tested in Python 3.6.5
 
@@ -30,9 +30,9 @@ Run predict.py to get a prediction result.
 
 Submit the result to the [Kaggle competition](https://www.kaggle.com/c/billion-word-imputation).
 
-[Our result with weight 1-5-5-1]()
+[Our result with weight 1-5-5-1](https://drive.google.com/open?id=1zOwllPLPUrd-UFNiI78_7M_W3xRgAO9x)
 
-[Our result with weight 1-1-1-1]()
+[Our result with weight 1-1-1-1](https://drive.google.com/open?id=1n82Ue9NeC5b7eGRWL3JtcXRxKwOWvlaM)
 
 # Parameters
 In the name of predict output file, the four numbers represents:
