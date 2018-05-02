@@ -30,9 +30,9 @@ Run predict.py to get a prediction result.
 
 Submit the result to the [Kaggle competition](https://www.kaggle.com/c/billion-word-imputation).
 
-[Our result with weight 1-5-5-1](https://drive.google.com/open?id=1zOwllPLPUrd-UFNiI78_7M_W3xRgAO9x)
+[Our full test dataset result with weight 1-5-5-1](https://drive.google.com/open?id=1zOwllPLPUrd-UFNiI78_7M_W3xRgAO9x)
 
-[Our result with weight 1-1-1-1](https://drive.google.com/open?id=1n82Ue9NeC5b7eGRWL3JtcXRxKwOWvlaM)
+[Our full test dataset result with weight 1-1-1-1](https://drive.google.com/open?id=1n82Ue9NeC5b7eGRWL3JtcXRxKwOWvlaM)
 
 # Parameters
 In the name of predict output file, the four numbers represents:
