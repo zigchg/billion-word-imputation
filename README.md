@@ -9,7 +9,7 @@ pip install stanfordcorenlp
 ## Standford CoreNLP
 https://stanfordnlp.github.io/CoreNLP/
 ## word2word.json file
-It is too large to be included in Git. I will set up a download link later.
+It is too large to be included in Git. It can be downloaded from [here](https://drive.google.com/file/d/1wS-kjyIA4e-gfT9yeYikS0SiBhLXVPTe/view).
 
 # Instructions
 This system runs in command line. It is tested under ubuntu 16.04 with Python 3.6.5.
